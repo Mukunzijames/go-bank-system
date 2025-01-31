@@ -1,9 +1,10 @@
-build:
-	@go build -o go-crud-operation go-crud-operation/main.go
-
 run:
-	go ./go-crud-operation
-test:
-	@go test -v ./...
+    go run .
+
+build:
+    go build -o myapp .
+
+start:
+    ./myapp
 
 

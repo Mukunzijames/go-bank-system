@@ -1,0 +1,9 @@
+build:
+	@go build -o go-crud-operation go-crud-operation/main.go
+
+run:
+	go ./go-crud-operation
+test:
+	@go test -v ./...
+
+

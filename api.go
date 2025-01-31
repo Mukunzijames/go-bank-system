@@ -58,8 +58,8 @@ func (s *APIServer) handleAccount(w http.ResponseWriter, r *http.Request) error 
 	return fmt.Errorf("method not allowed %s", r.Method)
 }
 func (s *APIServer) handleGetAccount(w http.ResponseWriter, r *http.Request) error {
-	fmt.Println("Starting API server on", s.listenAddr)
-	return nil
+	accounts := NewAccount("James", "Mukunzi")
+	return writeJSON(w, http.StatusOK, accounts)
 }
 func (s *APIServer) handleCreateAccount(w http.ResponseWriter, r *http.Request) error {
 	fmt.Println("Starting API server on", s.listenAddr)
